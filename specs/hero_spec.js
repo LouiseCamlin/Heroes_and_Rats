@@ -1,15 +1,21 @@
 var Hero = require('../hero');
-var Task = require('../task')
+var Task = require('../task');
+var Food = require('../food');
 var assert = require('assert');
 
 describe('hero', function(){
 
 var hero;
-var task
+var task;
+var food;
+var heroToo;
+
 
   beforeEach(function(){
     hero = new Hero("HackerMan", 100, "sandwiches");
     task = new Task(100, 10, "10 gold and a party", false);
+    heroToo = new Hero("TriceraCops", 80, "flapjacks");
+    food = new Food("pizza", 20);
   });
 
   it("hero should have a name", function() {
@@ -35,6 +41,12 @@ var task
   it("hero should be able to add a task to tasks", function(){
     hero.addTask(task);
     assert.strictEqual(1, hero.tasks.length);
+  })
+
+  it("when eaten food should replenish health", function() {
+    assert.strictEqual(80, heroToo.health);
+    heroToo.eatFood(food);
+    assert.strictEqual(100, heroToo.health);
   })
 
 
