@@ -9,7 +9,7 @@ describe ('task', function(){
     task = new Task(100, 10, "10 gold and a party", false);
   });
 
-  it("task should have a diffficulty", function() {
+  it("task should have a difficulty", function() {
     assert.strictEqual(100, task.difficulty);
   });
 

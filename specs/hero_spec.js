@@ -9,14 +9,21 @@ var hero;
 var task;
 var food;
 var heroToo;
+var task2;
+var task3;
 
 
   beforeEach(function(){
     hero = new Hero("HackerMan", 100, "sandwiches");
-    task = new Task(100, 10, "10 gold and a party", false);
     heroToo = new Hero("TriceraCops", 50, "flapjacks");
+
     food = new Food("pizza", 20);
-    food2 = new Food("flapjacks", 20)
+    food2 = new Food("flapjacks", 20);
+
+    task = new Task(10, 10, 10, false);
+    task2 = new Task(2, 3, 1, false);
+    task3 = new Task(5, 4, 5, false);
+
   });
 
   it("hero should have a name", function() {
@@ -54,6 +61,35 @@ var heroToo;
     heroToo.eatFood(food2);
     assert.strictEqual(80, heroToo.health);
   })
+
+  it("hero can sort tasks by difficulty highest first", function() {
+    hero.addTask(task2);
+    hero.addTask(task);
+    hero.sortTasks(this.tasks, "difficulty", "desc")
+    assert.deepEqual([task, task2], hero.sortTasks(this.tasks, "difficulty", "desc"));
+  })
+
+  it("hero can sort tasks by urgency lowest first", function() {
+    hero.addTask(task2);
+    hero.addTask(task);
+    hero.addTask(task3);
+    hero.sortTasks(this.tasks, "urgency", "asc")
+    assert.deepEqual([task2, task3, task], hero.sortTasks(this.tasks, "urgency", "asc"))
+  })
+
+  it("hero can sort tasks by rewards highest first", function() {
+    hero.addTask(task2);
+    hero.addTask(task);
+    hero.addTask(task3);
+    assert.deepEqual([task, task3, task2], hero.sortTasks(this.tasks, "reward", "desc"))
+  })
+
+
+
+
+
+
+
 
 
 
