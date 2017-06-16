@@ -14,8 +14,9 @@ var heroToo;
   beforeEach(function(){
     hero = new Hero("HackerMan", 100, "sandwiches");
     task = new Task(100, 10, "10 gold and a party", false);
-    heroToo = new Hero("TriceraCops", 80, "flapjacks");
+    heroToo = new Hero("TriceraCops", 50, "flapjacks");
     food = new Food("pizza", 20);
+    food2 = new Food("flapjacks", 20)
   });
 
   it("hero should have a name", function() {
@@ -44,9 +45,14 @@ var heroToo;
   })
 
   it("when eaten food should replenish health", function() {
-    assert.strictEqual(80, heroToo.health);
+    assert.strictEqual(50, heroToo.health);
     heroToo.eatFood(food);
-    assert.strictEqual(100, heroToo.health);
+    assert.strictEqual(70, heroToo.health);
+  })
+
+  it("if food is favourite it should replenish value * 1.5", function(){
+    heroToo.eatFood(food2);
+    assert.strictEqual(80, heroToo.health);
   })
 
 
