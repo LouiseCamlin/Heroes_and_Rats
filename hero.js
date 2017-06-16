@@ -30,6 +30,31 @@ Hero.prototype = {
     return _.orderBy(this.tasks, value, order);
   },
 
+  completeTask: function(task) {
+      return task.completedStatus = true
+  },
+
+  viewCompletedTasks: function() {
+    var completedTasks = [];
+    for (task of this.tasks) {
+      if (task.completedStatus === true) {
+        completedTasks.push(task)
+      }
+    }
+    return completedTasks;
+  },
+
+  ViewNotCompletedTasks: function() {
+      var notCompletedTasks = [];
+      for (task of this.tasks) {
+        if (task.completedStatus === false) {
+          notCompletedTasks.push(task)
+        }
+      }
+      return notCompletedTasks;
+
+
+
 }
 
 

@@ -84,6 +84,25 @@ var task3;
     assert.deepEqual([task, task3, task2], hero.sortTasks(this.tasks, "reward", "desc"))
   })
 
+  it("can complete a task", function() {
+    hero.addTask(task)
+    hero.completeTask(task);
+    assert.strictEqual(true, task.completedStatus);
+  });
+
+  it("can view view completed tasks", function() {
+    hero.addTask(task)
+    hero.completeTask(task);
+    assert.deepEqual([task], hero.viewCompletedTasks());
+  })
+
+  it("can view not completed tasks", function() {
+    hero.addTask(task);
+    hero.addTask(task2);
+    hero.completeTask(task2);
+    assert.deepEqual([task2], hero.viewNotCompletedTasks());
+  })
+
 
 
 
