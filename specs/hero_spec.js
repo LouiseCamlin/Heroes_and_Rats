@@ -96,12 +96,12 @@ var task3;
     assert.deepEqual([task], hero.viewCompletedTasks());
   })
 
-  it("can view not completed tasks", function() {
-    hero.addTask(task);
-    hero.addTask(task2);
-    hero.completeTask(task2);
-    assert.deepEqual([task2], hero.viewNotCompletedTasks());
-  })
+ it("can view not completed tasks", function() {
+   hero.addTask(task);
+   hero.addTask(task2);
+   hero.completeTask(task2);
+   assert.deepEqual([task], hero.viewNotCompletedTasks());
+ })
 
 
 

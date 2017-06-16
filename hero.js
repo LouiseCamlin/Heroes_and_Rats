@@ -44,7 +44,7 @@ Hero.prototype = {
     return completedTasks;
   },
 
-  ViewNotCompletedTasks: function() {
+  viewNotCompletedTasks: function() {
       var notCompletedTasks = [];
       for (task of this.tasks) {
         if (task.completedStatus === false) {
@@ -52,8 +52,7 @@ Hero.prototype = {
         }
       }
       return notCompletedTasks;
-
-
+    },
 
 }
 
