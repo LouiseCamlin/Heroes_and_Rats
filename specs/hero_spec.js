@@ -17,8 +17,8 @@ var task3;
     hero = new Hero("HackerMan", 100, "sandwiches");
     heroToo = new Hero("TriceraCops", 50, "flapjacks");
 
-    food = new Food("pizza", 20);
-    food2 = new Food("flapjacks", 20);
+    food = new Food("pizza", 20, false);
+    food2 = new Food("flapjacks", 20, false);
 
     task = new Task(10, 10, 10, false);
     task2 = new Task(2, 3, 1, false);

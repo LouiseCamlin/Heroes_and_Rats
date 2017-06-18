@@ -6,7 +6,7 @@ describe ('food', function(){
   var food
 
   beforeEach(function() {
-    food = new Food("pizza", 20); 
+    food = new Food("pizza", 20, false); 
   });
 
   it("food should have a name", function() {

@@ -31,7 +31,7 @@ Hero.prototype = {
   },
 
   completeTask: function(task) {
-      return task.completedStatus = true
+    return task.completedStatus = true
   },
 
   viewCompletedTasks: function() {
