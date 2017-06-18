@@ -21,9 +21,12 @@ Hero.prototype = {
     if (food.name === this.favouriteFood){
       return this.health += (food.replenishmentValue * 1.5)
     } 
+    if (food.poisonedStatus === true){
+      return this.health -= food.replenishmentValue
+    }
     else {
-    } 
-    return this.health += food.replenishmentValue
+      return this.health += food.replenishmentValue
+    }
   },
 
   sortTasks: function(tasks, value, order) {

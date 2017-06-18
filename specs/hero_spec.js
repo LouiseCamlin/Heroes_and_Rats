@@ -19,6 +19,7 @@ var task3;
 
     food = new Food("pizza", 20, false);
     food2 = new Food("flapjacks", 20, false);
+    food3 = new Food("apple", 10, true);
 
     task = new Task(10, 10, 10, false);
     task2 = new Task(2, 3, 1, false);
@@ -90,29 +91,22 @@ var task3;
     assert.strictEqual(true, task.completedStatus);
   });
 
-  it("can view view completed tasks", function() {
+  it("can view completed tasks", function() {
     hero.addTask(task)
     hero.completeTask(task);
     assert.deepEqual([task], hero.viewCompletedTasks());
   })
 
- it("can view not completed tasks", function() {
-   hero.addTask(task);
-   hero.addTask(task2);
-   hero.completeTask(task2);
-   assert.deepEqual([task], hero.viewNotCompletedTasks());
- })
+  it("can view not completed tasks", function() {
+    hero.addTask(task);
+    hero.addTask(task2);
+    hero.completeTask(task2);
+    assert.deepEqual([task], hero.viewNotCompletedTasks());
+  })
 
-
-
-
-
-
-
-
-
-
-
-
+  it("poisoned food will diminish health", function(){
+    heroToo.eatFood(food3);
+    assert.strictEqual(40, heroToo.health);
+  })
 
 })

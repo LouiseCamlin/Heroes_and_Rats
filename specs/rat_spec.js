@@ -2,7 +2,7 @@ var Rat = require('../rat');
 var Food = require('../food');
 var assert = require('assert');
 
-describe('hero', function(){
+describe('rat', function(){
 
   var rat;
   var food;
