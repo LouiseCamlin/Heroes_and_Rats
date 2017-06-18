@@ -6,7 +6,9 @@ describe ('food', function(){
   var food
 
   beforeEach(function() {
+
     food = new Food("pizza", 20, false); 
+
   });
 
   it("food should have a name", function() {
@@ -16,16 +18,5 @@ describe ('food', function(){
   it("food should have replenishment value", function() {
     assert.strictEqual(20, food.replenishmentValue);
   });
-
-
-
-
-
-
-
-
-
-
-
 
 });

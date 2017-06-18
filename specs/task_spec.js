@@ -6,7 +6,9 @@ describe ('task', function(){
   var task;
 
   beforeEach(function(){
+
     task = new Task(100, 10, "10 gold and a party", false);
+    
   });
 
   it("task should have a difficulty", function() {
@@ -25,7 +27,7 @@ describe ('task', function(){
     assert.strictEqual(false, task.completedStatus);
   })
 
- 
+
 
 
 

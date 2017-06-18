@@ -12,6 +12,7 @@ describe('rat', function(){
 
     rat = new Rat("Ratigan")
     food = new Food("pizza", 20, false);
+    
   });
 
   it("rat has name", function(){

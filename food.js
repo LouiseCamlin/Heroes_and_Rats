@@ -4,11 +4,4 @@ var Food = function(name, replenishmentValue, poisonedStatus) {
   this.poisonedStatus = poisonedStatus;
 };
 
-
-
-
-
-
-
-
 module.exports = Food;

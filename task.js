@@ -5,11 +5,4 @@ var Task = function(difficulty, urgency, reward, completedStatus) {
   this.completedStatus = completedStatus;
 };
 
-
-
-
-
-
-
-
 module.exports = Task;

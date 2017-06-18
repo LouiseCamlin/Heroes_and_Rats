@@ -48,17 +48,15 @@ Hero.prototype = {
   },
 
   viewNotCompletedTasks: function() {
-      var notCompletedTasks = [];
-      for (task of this.tasks) {
-        if (task.completedStatus === false) {
-          notCompletedTasks.push(task)
-        }
+    var notCompletedTasks = [];
+    for (task of this.tasks) {
+      if (task.completedStatus === false) {
+        notCompletedTasks.push(task)
       }
-      return notCompletedTasks;
-    },
+    }
+    return notCompletedTasks;
+  },
 
 }
-
-
 
 module.exports = Hero;

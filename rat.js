@@ -8,5 +8,4 @@ Rat.prototype = {
   }
 }
 
-
 module.exports = Rat;

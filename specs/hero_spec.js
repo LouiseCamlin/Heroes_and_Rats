@@ -14,6 +14,7 @@ var task3;
 
 
   beforeEach(function(){
+    
     hero = new Hero("HackerMan", 100, "sandwiches");
     heroToo = new Hero("TriceraCops", 50, "flapjacks");
 
@@ -21,9 +22,9 @@ var task3;
     food2 = new Food("flapjacks", 20, false);
     food3 = new Food("apple", 10, true);
 
-    task = new Task(10, 10, 10, false);
-    task2 = new Task(2, 3, 1, false);
-    task3 = new Task(5, 4, 5, false);
+    task = new Task(10, 10, "9 gold", false);
+    task2 = new Task(2, 3, "1 gold", false);
+    task3 = new Task(5, 4, "5 gold", false);
 
   });
 
